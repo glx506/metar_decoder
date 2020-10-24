@@ -209,10 +209,6 @@ class MetarParser:
 
     def remarks(self):
         '''Примечания'''
-        result = re.search(r'RMK', self.metar_data)
-        if result:
-            print("Remarks:")
-
         result = re.search(r'AO2', self.metar_data)
         if result:
             print("This station is automated with a precipitation discriminator (rain/snow) sensor")
